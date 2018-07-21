@@ -1,0 +1,495 @@
+1. The output of the code below is(when 1 is entered)
+#include <stdio.h>
+void main()
+{
+	double ch;
+	printf("enter a value btw 1 to 2:");
+	scanf("%lf", &ch);
+	switch (ch)
+	{
+		case 1:
+			printf("1");
+			break;
+		case 2:
+			printf("2");
+			break;
+	}
+}
+a. 1
+b. 2
+c. Nothing will print
+d. Compilation Error
+
+Correct : d. Compilation Error
+In switch(), only integer or character variable can be given. Here, variable ch is double.
+
+//-------------------------------------------------------------//
+
+2.Which of the following option is the correct representation of the following code?
+	e = a * b + c / d * f;
+	
+Select one:
+
+a. Both (e = ((a * b) + (c / (d * f)));) and (e = ((a * b) + ((c / d)* f)););
+b. e = ((a * b) + (c / (d * f)));
+c. e = ((a * b) + ((c / d)* f));
+d. e = (a * (b +(c /(d * f))));
+
+Correct : e = ((a * b) + ((c / d)* f));
+
+//---------------------------------------------------------------//
+
+3. When 2 is entered, The output of the code below is?
+#include <stdio.h>
+void main()
+{
+	int ch;
+	printf("enter a value btw 1 to 2:");
+	scanf("%d", &ch);
+	switch (ch)
+	{
+		case 1:
+			printf("1\n");
+			break;
+		printf("Hi");
+		default:
+		printf("2\n");
+	}
+}
+
+Correct : 2 will be output. As 2 is entered, so ch=2. In switch, no case 2 is present. So the default case will execute.
+
+//---------------------------------------------------------------//
+
+4. The following code 'for(;;)' represents an infinite loop. It can be terminated by.
+Select one:
+
+a. break
+b. All of the mentioned 
+c. abort()
+d. exit(0)
+
+Correct : break;
+
+//---------------------------------------------------------------//
+
+5. What is the output of this C code?
+
+#include <stdio.h>
+int main()
+{
+	int a = -1, b = 4, c = 1, d;
+	d = ++a && ++b || ++c;
+	printf("%d, %d, %d, %d\n", a, b, c, d);
+	return 0;
+}
+
+Select one:
+
+a. -1, 4, 1, 1
+b. 0, 4, 2, 1
+c. 0, 5, 1, 0 
+d. 0, 5, 2, 1
+
+Corrext : b. 0, 4, 2, 1
+
+//-----------------------------------------------------------------//
+
+6. Which of the following is a ternary operator?
+Select one:
+
+a. ?: 
+b. >>=
+c. &&
+d. ->
+
+Correct : a. ?:
+
+//------------------------------------------------------------------//
+
+7. What is the output of the below code snippet?
+#include<stdio.h>
+main() 
+{
+   for(1;2;3)
+      printf("Hello");
+}
+
+a. Infinite loop
+b. Prints “Hello” once.
+c. No output
+d. Compile error
+
+Correct : Infinite loop, as the second expression is non-0, hence the condition is always true
+
+//------------------------------------------------------------------//
+
+8. What is the output of the following program?
+#include<stdio.h>
+main()
+{ 
+   char s1[50], s2[50] = "Hello";
+   s1 = s2;
+   printf("%s", s1);
+}
+
+a. Hello
+b. No output
+c. Compile error
+d. Runtime error
+
+Correct : Compile Error, ‘s1’ refers to base address and is constant. Hence raising to ‘lvalue’ required compile time error.
+
+//---------------------------------------------------------------------------------//
+
+9. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	char ch=126;
+	ch=ch+19;
+	printf("%d",ch);
+	return 0;
+}
+
+a. 145
+b. -111
+c. +INF
+d. -121
+
+Correct : b. -111
+
+//---------------------------------------------------------------------------------//
+
+10. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	char arr[10]={77,78,88,94,106,115,122,123,125,125,126,10,93};
+	char x=(arr+2)[3];
+	printf("%d\n",x);
+	printf("%d",arr[10]);
+	return 0;
+}
+
+a. Compile Time Error
+b. Garbage Valur, Garbage Value
+c. 115, 126
+d. 115, Unpredictable value
+
+Correct : d. 115, Unpredictable value
+
+//---------------------------------------------------------------------------------//
+
+11. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	float a = (6.8,9.0);
+	int b=(5,9);
+	if(a==b)
+		printf("Equal");
+	else
+		printf("Not Equal");
+	return 0;
+}
+
+Correct : Equal
+
+//---------------------------------------------------------------------------------//
+
+12. How to round off a float value to int value ?
+
+a. x=(int)val+0.5;
+b. x=(int)((int)val+0.5);
+c. x=(int)(val+0.5);
+d. x=int(val+0.5);
+
+Correct : c.  x=(int)(val+0.5);
+
+//---------------------------------------------------------------------------------//
+
+13. Write the condition so that the below code outputs "Hello AOT"
+#include<stdio.h>
+int main()
+{
+	if(<condition>)
+		printf("Hello ");
+	else
+		printf("AOT");
+	return 0;
+}
+
+Correct : !printf("Hello ")
+
+//---------------------------------------------------------------------------------//
+
+14. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	int a=0;
+	switch(a)
+	{
+		default:
+			a=4;
+		case 6:
+			a--;
+		case 5:
+			a=a+1;
+		case 1:
+			a=a-1;
+	}
+	printf("%d\n",a);
+	return 0;
+}
+
+a. 5
+b. 4
+c. 3
+d. 0
+
+Correct : c. 3 
+
+//---------------------------------------------------------------------------------//
+
+15. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	float a;
+	(int)a=45;
+	printf("%d",a);
+	return 0;
+}
+
+a. Compile Time Error
+b. 45
+c. Runtime Error
+d. None of these
+
+Correct : a. Compile Time Error
+
+//---------------------------------------------------------------------------------//
+
+16. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	int a=5,b=10,c=1;
+	if(a&&b>c)
+		printf("AOT Coding Club");
+	else
+		break;
+	return 0;
+}
+
+a. AOT Coding Club
+b. It will print nothing
+c. Run Time Error
+d. Compilation Error
+
+Correct : d. Compilation Error
+
+//---------------------------------------------------------------------------------//
+
+17. What is the output of the following program?
+#include<stdio.h>
+int main()
+{
+	int a=100;
+	if(a>10)
+		printf("Freshiesta\n");
+	else if(a>30)
+		printf("Codiesta\n");
+	else if(a>50)
+		printf("Webiesta\n");
+	return 0;
+}
+a. Freshiesta
+b. Codiesta
+c. Webiesta
+d. Freshiesta
+   Codiesta
+   Webiesta
+   
+Correct : a. Freshiesta
+
+//----------------------------------------------------------------------------------//
+
+18. The correct syntax for running two variable for loop simultaneously is.
+Select one:
+
+a. for (i = 0; i < n;i++){}
+	for (j = 0; j < n;j += 5){}
+
+b. None of the mentioned
+
+c. for(i = 0, j = 0;i < n, j < n; i++, j += 5)
+
+d. for(i = 0; i < n; i++)
+	for(j = 0; j < n; j += 5)
+	
+Correct : for(i = 0, j = 0;i < n, j < n; i++, j += 5)
+	
+//---------------------------------------------------------------------------------//
+
+19. What care must be taken during swapping 2 numbers?
+	b = (b / a);
+	a = a * b;
+	b = a / b;
+	
+Select one:
+
+a. Data type should be either of short, int and long 
+b. Data type should be either of float and double
+c. All data types are accepted except for (char *).
+d. This code doesn't swap 2 numbers.
+
+Correct : Data type should be either of float and double
+
+//---------------------------------------------------------------------------------//
+
+20. Look at this series: 70, 71, 76, __, 81, 86, 70, 91, ... What number should fill the blank?
+a. 70
+b. 71
+c. 80
+d. 96
+
+Correct : 70, In this series, 5 is added to the previous number; the number 70 is inserted as every third number.
+
+//----------------------------------------------------------------------------------//
+
+21. PETAL : FLOWER
+
+a. salt : pepper
+b. tire : bicycle
+c. base : ball
+d. sandals : shoes
+e. puppy : dog 
+
+Correct: Option B
+
+Explanation:
+
+A petal is a part of a flower; a tire is a part of a bicycle.
+
+//---------------------------------------------------------------------------------//
+
+22. Select the odd one out?
+a. inch
+b. ounce
+c. centimeter
+d. yard
+
+Correct: ounce
+
+//----------------------------------------------------------------------------------//
+
+23. Yard is to inch as quart is to
+a. gallon
+b. ounce
+c. milk
+d. liquid
+
+Correct: ounce
+
+//---------------------------------------------------------------------------------//
+
+24. A girl introduced a boy as the son of the daughter of the father of her uncle. The boy is girl’s 
+
+a. Uncle
+b. Nephew
+c. Brother
+d. Son
+
+Correct : c. Brother, Daughter of uncle’s father – Uncle’s sister – Mother;
+Mother’s son – Brother. 
+
+//---------------------------------------------------------------------------------//
+
+25. How many words can be made by taking 3 letters at a time from the word INDIA ? 
+
+a. 30
+b. 31
+c. 32
+d. 33
+
+//----------------------------------------------------------------------------------//
+
+26. Here are some words translated from an artificial language.
+	tamceno means sky blue
+	cenorax means blue cheese
+	aplmitl means star bright
+Which word could mean "bright sky"?
+A. 	cenotam
+B. 	mitltam
+C. 	raxmitl
+D. 	aplceno
+
+Answer: Option B, Tam means sky; ceno means blue; rax means cheese; apl means star; and mitl means bright. So, mitltam means bright sky. 
+
+//----------------------------------------------------------------------------------//
+
+27. The probability that a card drawn from a pack of 52 cards will be a diamond or a king is..
+
+a. 2/13
+b. 4/13
+c. 1/13
+d. 1/52
+
+Correct : 4/13 (R.S. AGGARWAL pg-628 q-17)
+
+//----------------------------------------------------------------------------------//
+
+28. How many times do the hands of a clock coincide in a day ?
+
+a. 20
+b. 21
+c. 22
+d. 24
+
+Correct: c. 22
+
+//----------------------------------------------------------------------------------//
+
+29. Find out the wrong number in the series
+    8,27,125,343,1331
+
+a. 125
+b. 1331
+c. None of these
+d. 27 
+
+Correct: c. None of these
+
+//----------------------------------------------------------------------------------//
+
+30. What will be the output of this code?
+#include <stdio.h>
+int main()
+{
+	int a=10;
+	if(a==a--)
+		printf("TRUE1\t");
+	a=10;
+	if(a==a--)
+		printf("TRUE2\t");
+	return 0;
+}
+
+a. TRUE1
+b. TRUE2
+c. TRUE1 TRUE2
+d. No Output
+
+Correct: d. No Output
+
+//-----------------------------------------------------------------------------------//
+
+
+
+
+
+
+
